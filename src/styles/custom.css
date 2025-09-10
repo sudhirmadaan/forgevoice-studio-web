@@ -1,0 +1,70 @@
+/* Aurora animated background */
+.aurora-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      radial-gradient(ellipse 50% 80% at 20% 40%, rgba(241, 200, 122, 0.15), transparent),
+      radial-gradient(ellipse 50% 80% at 80% 50%, rgba(96, 165, 250, 0.15), transparent),
+      radial-gradient(ellipse 40% 60% at 50% 60%, rgba(167, 139, 250, 0.15), transparent);
+    background-size: 200% 200%;
+    animation: aurora 20s linear infinite;
+    opacity: 0.35;
+    transition: opacity 0.5s ease;
+  }
+  
+  @keyframes aurora {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Glassmorphism card */
+  .system-narrative-card {
+    background: rgba(20, 20, 20, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 1rem;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  /* Fade in animation */
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out forwards;
+  }
+  
+  /* Button hover glow */
+  button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+  }
+  
+  /* Typography inside card */
+  .system-narrative-card h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  .system-narrative-card p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  /* Footer links */
+  .system-narrative-card a {
+    color: #facc15;
+  }
+  .system-narrative-card a:hover {
+    color: #fde68a;
+  }
+  
